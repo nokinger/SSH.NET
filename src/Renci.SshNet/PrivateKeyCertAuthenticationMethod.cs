@@ -91,7 +91,7 @@ namespace Renci.SshNet
                 var message = new RequestMessagePublicKey(ServiceName.Connection,
                                                             Username,
                                                             CertificateFile.HostCertificate.Name,
-                                                            CertificateFile.HostCertificate.Data);
+                                                            CertificateFile.Data);
 
                 //  Send signature for very first request
                 var signatureData = new SshSignatureData(message, session.SessionId).GetBytes();
