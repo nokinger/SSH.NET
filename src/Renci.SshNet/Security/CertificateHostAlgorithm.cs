@@ -170,14 +170,14 @@ namespace Renci.SshNet.Security
             private ulong _validAfter { get; set; }
             public DateTime ValidAfter
             {
-                get { return _validAfter.FromUnixTime(); }
+                get { return _validAfter.TryFromUnixTime(); }
                 set { _validAfter = value.ToUnixTime(); }
             }
 
             private ulong _validBefore { get; set; }
             public DateTime ValidBefore
             {
-                get { return _validBefore.FromUnixTime(); }
+                get { return _validBefore.TryFromUnixTime(); }
                 set { _validBefore = value.ToUnixTime(); }
             }
 
@@ -330,6 +330,7 @@ namespace Renci.SshNet.Security
                 _validPrinciples = ReadBinary();
                 _validAfter = ReadUInt64();
                 _validBefore = ReadUInt64();
+                
                 _criticalOptions = ReadBinary();
                 _extensions = ReadBinary();
                 _reserved = ReadBinary();
