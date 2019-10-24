@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>SSH.NET</id>
-        <version>2017.0.0-beta1</version>
-        <title>SSH.NET</title>
+        <id>AC.IAS.SSH</id>
+        <version>2019.0.2</version>
+        <title>AC.IAS.SSH</title>
         <authors>Renci</authors>
         <owners>olegkap,drieseng</owners>
         <licenseUrl>https://github.com/sshnet/SSH.NET/blob/master/LICENSE</licenseUrl>
@@ -31,22 +31,6 @@
           </group>
           <group targetFramework="netstandard2.0">
             <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-          </group>
-          <group targetFramework="sl4">
-            <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-          </group>
-          <group targetFramework="sl5">
-            <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-          </group>
-          <group targetFramework="wp71">
-            <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-          </group>
-          <group targetFramework="wp8">
-            <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-          </group>
-          <group targetFramework="uap10.0">
-            <dependency id="SshNet.Security.Cryptography" version="[1.3.0]" />
-            <dependency id="System.Xml.XPath.XmlDocument" version="4.3.0" />
           </group>
         </dependencies>
     </metadata>

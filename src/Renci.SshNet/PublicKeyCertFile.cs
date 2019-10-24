@@ -8,6 +8,8 @@ using System.Text.RegularExpressions;
 
 namespace Renci.SshNet
 {
+    using System.Security.Cryptography;
+
     /// <summary>
     /// 
     /// </summary>
@@ -45,6 +47,17 @@ namespace Renci.SshNet
             {
                 Open(certFile);
             }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicKeyCertFile"/> class.
+        /// </summary>
+        /// <param name="stream">Certificate stream.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="stream"/> is <c>null</c> or empty.</exception>
+        public PublicKeyCertFile(Stream stream)
+        {
+            if (stream == null) throw new ArgumentNullException("stream");
+            this.Open(stream);
         }
 
 
