@@ -11,12 +11,12 @@
         /// <value>
         /// The name of the public key algorithm.
         /// </value>
-        public byte[] PublicKeyAlgorithmName { get; private set; }
+        public byte[] PublicKeyAlgorithmName { get; set; }
 
         /// <summary>
         /// Gets the public key data.
         /// </summary>
-        public byte[] PublicKeyData { get; private set; }
+        public byte[] PublicKeyData { get; set; }
 
         /// <summary>
         /// Gets or sets public key signature.
@@ -65,6 +65,19 @@
         {
             PublicKeyAlgorithmName = Ascii.GetBytes(keyAlgorithmName);
             PublicKeyData = keyData;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RequestMessagePublicKey"/> class.
+        /// </summary>
+        /// <param name="serviceName">Name of the service.</param>
+        /// <param name="username">Authentication username.</param>
+        /// <param name="keyAlgorithmName">Name of private key algorithm.</param>
+        /// <param name="keyData">Private key data.</param>
+        public RequestMessagePublicKey(ServiceName serviceName, string username)
+            : base(serviceName, username, "publickey")
+        {
+            
         }
 
         /// <summary>
