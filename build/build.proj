@@ -72,7 +72,6 @@
 		<ItemGroup>
 			<BuildOutput Remove="@(BuildOutput)"/>
 			<BuildOutput Include="$(MSBuildThisFileDirectory)..\src\%(TargetFramework.OutputDirectory)\Renci.SshNet.dll"/>
-			<BuildOutput Include="$(MSBuildThisFileDirectory)..\src\%(TargetFramework.OutputDirectory)\Renci.SshNet.xml"/>
 		</ItemGroup>
 		<Copy SourceFiles="@(BuildOutput)" DestinationFolder="$(MSBuildThisFileDirectory)target\package\lib\%(TargetFramework.Moniker)"/>
 	</Target>
@@ -85,7 +84,6 @@
 		<ItemGroup>
 			<BuildOutput Remove="@(BuildOutput)"/>
 			<BuildOutput Include="$(MSBuildThisFileDirectory)..\src\%(TargetFramework.OutputDirectory)\*.dll"/>
-			<BuildOutput Include="$(MSBuildThisFileDirectory)..\src\%(TargetFramework.OutputDirectory)\*.xml"/>
 		</ItemGroup>
 		<Copy SourceFiles="@(BuildOutput)" DestinationFolder="$(MSBuildThisFileDirectory)target\bin\lib\%(TargetFramework.Moniker)"/>
 	</Target>
