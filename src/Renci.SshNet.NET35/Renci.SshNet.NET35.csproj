@@ -556,6 +556,12 @@
     <Compile Include="..\Renci.SshNet\Messages\Transport\UnimplementedMessage.cs">
       <Link>Messages\Transport\UnimplementedMessage.cs</Link>
     </Compile>
+    <Compile Include="..\Renci.SshNet\Native\NativeAuthenticationMethod.cs">
+      <Link>Native\NativeAuthenticationMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Renci.SshNet\Native\RequestMessageNative.cs">
+      <Link>Native\RequestMessageNative.cs</Link>
+    </Compile>
     <Compile Include="..\Renci.SshNet\NetConfClient.cs">
       <Link>NetConfClient.cs</Link>
     </Compile>
@@ -985,7 +991,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="2f5f8c90-0bd1-424f-997c-7bc6280919d1" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="2f5f8c90-0bd1-424f-997c-7bc6280919d1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
